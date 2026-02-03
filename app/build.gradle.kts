@@ -1,12 +1,4 @@
-val org.gradle.api.provider.Provider<org.gradle.api.artifacts.MinimalExternalModuleDependency>.v132: kotlin.Any
 
-val org.gradle.api.provider.Provider<org.gradle.api.artifacts.MinimalExternalModuleDependency>.v214: kotlin.Any
-
-val org.gradle.api.provider.Provider<org.gradle.api.artifacts.MinimalExternalModuleDependency>.v1110: kotlin.Any
-
-val org.gradle.api.provider.Provider<org.gradle.api.artifacts.MinimalExternalModuleDependency>.v161: kotlin.Any
-
-val org.gradle.api.provider.Provider<org.gradle.api.artifacts.MinimalExternalModuleDependency>.v1120: kotlin.Any
 
 plugins {
     alias(libs.plugins.android.application)
@@ -56,9 +48,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.androidx.core.ktx.v1120)
-    implementation(libs.androidx.appcompat.v161)
-    implementation(libs.material.v1110)
-    implementation(libs.androidx.constraintlayout.v214)
-    implementation(libs.androidx.recyclerview.v132)
+
+
 }

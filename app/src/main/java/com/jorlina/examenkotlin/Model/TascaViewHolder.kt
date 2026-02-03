@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.jorlina.examenkotlin.R
 
-class TascaViewHolder(itemView: View,  private val onItemClick: (Tasca) -> Unit) : RecyclerView.ViewHolder(itemView) {
+class TascaViewHolder(itemView: View, private val onItemClick: (Tasca) -> Unit) : RecyclerView.ViewHolder(itemView) {
 
         private val tvNom: TextView = itemView.findViewById(R.id.tvNom)
         private val tvCategoria: TextView = itemView.findViewById(R.id.tvCategoria)
@@ -20,12 +20,9 @@ class TascaViewHolder(itemView: View,  private val onItemClick: (Tasca) -> Unit)
 
         fun renderitza(item: Tasca){
             tvNom.text = item.nom
-            tvCategoria.text = object : View {
-                
-            }.categoria
-            tvCategoria.class(item.categoria)
+            tvCategoria.text = item.categoria as CharSequence?
             tvData.text = item.data
-            tvEstat.text = item.estat
+            tvEstat.text = item.estat as CharSequence?
 
 
             itemView.setOnClickListener {
