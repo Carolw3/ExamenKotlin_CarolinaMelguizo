@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenKotlin">
         <activity
+            android:name=".Model.TascaViewHolder"
+            android:exported="false" />
+        <activity
+            android:name=".Model.TasquesAdapter"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

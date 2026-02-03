@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:endroid="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:background="@color/colorPrimary"
+        android:id="@+id/titol"
+        android:elevation="4dp"
+        app:title="Les meves tasques"
+        app:titleTextColor="@android:color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <com.google.android.material.chip.ChipGroup
+        app:checkedChip="@+id/chipTotes"
+        app:singleSelection="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipTot"
+        endroid:style="@style/Widget.Material3.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Totes"
+        app:layout_constraintTop_toBottomOf="@id/titol"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipFeina"
+        style="@style/Widget.Material3.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Feina"
+        app:layout_constraintTop_toBottomOf="@id/titol"
+        app:layout_constraintStart_toEndOf="@id/chipTot"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipFamilia"
+        style="@style/Widget.Material3.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Família"
+        app:layout_constraintTop_toBottomOf="@id/titol"
+        app:layout_constraintStart_toEndOf="@id/chipFeina"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipPersonal"
+        style="@style/Widget.Material3.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Personal"
+        app:layout_constraintTop_toBottomOf="@id/titol"
+        app:layout_constraintStart_toEndOf="@id/chipFamilia"/>
+
+</com.google.android.material.chip.ChipGroup>
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:clipToPadding="false"
+    android:padding="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
